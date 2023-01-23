@@ -43,8 +43,8 @@ return require('packer').startup(function(use)
     {'rafamadriz/friendly-snippets'}, -- Optional
   }
 }
-
   -- Copilot
   use('github/copilot.vim')
+  use ('ThePrimeagen/vim-be-good')
 end)
 

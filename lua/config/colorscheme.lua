@@ -3,7 +3,7 @@ require("catppuccin").setup({
     background = { -- :h background
         dark = "mocha",
     },
-    transparent_background = true,
+    transparent_background = false,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = false,
     dim_inactive = {
@@ -36,7 +36,7 @@ require("catppuccin").setup({
         telescope = true,
         notify = false,
         mini = false,
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#
     },
 })
 
