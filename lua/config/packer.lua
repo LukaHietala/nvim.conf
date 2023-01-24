@@ -59,6 +59,8 @@ return require('packer').startup(function(use)
     }
     -- Copilot
     use('github/copilot.vim')
+    -- Undotree
+    use("mbbill/undotree")
     -- Fun stuff
     use ('ThePrimeagen/vim-be-good')
 end)
