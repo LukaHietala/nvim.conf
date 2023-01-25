@@ -45,7 +45,6 @@ return require('packer').startup(function(use)
     }
 
     -- Error lens
-    -- Lua
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
@@ -57,6 +56,9 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use 'folke/lsp-colors.nvim'
+    -- Formatting
+    use "lukas-reineke/lsp-format.nvim"
     -- Copilot
     use('github/copilot.vim')
     -- Undotree

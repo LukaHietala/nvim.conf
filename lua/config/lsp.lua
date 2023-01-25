@@ -7,6 +7,18 @@ lsp.preset('recommended')
 -- You'll need to list the servers installed in your system
 lsp.setup_servers({'tsserver', 'eslint', 'tailwindcss'})
 
+local cmp = require("cmp")
+local cmp_mappings = lsp.defaults.cmp_mappings({
+  ["<C-Space>"] = cmp.mapping.complete(),
+})
+
+
+lsp.setup_nvim_cmp({
+  mapping = cmp_mappings
+})
+
+
+
 lsp.nvim_workspace()
 
 lsp.setup()

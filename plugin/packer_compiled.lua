@@ -119,6 +119,16 @@ _G.packer_plugins = {
     path = "/home/lukahietala/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/lukahietala/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
+  ["lsp-format.nvim"] = {
+    loaded = true,
+    path = "/home/lukahietala/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
+    url = "https://github.com/lukas-reineke/lsp-format.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/lukahietala/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
