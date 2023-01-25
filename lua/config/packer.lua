@@ -59,6 +59,8 @@ return require('packer').startup(function(use)
     use 'folke/lsp-colors.nvim'
     -- Formatting
     use "lukas-reineke/lsp-format.nvim"
+    -- Discord Rich Presence
+    use 'andweeb/presence.nvim'
     -- Copilot
     use('github/copilot.vim')
     -- Undotree
