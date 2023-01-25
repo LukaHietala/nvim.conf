@@ -43,11 +43,11 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
     }
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- Error lens
     use {
         "folke/trouble.nvim",
-        requires = "nvim-tree/nvim-web-devicons",
         config = function()
             require("trouble").setup {
                 -- your configuration comes here
