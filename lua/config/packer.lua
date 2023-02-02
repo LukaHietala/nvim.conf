@@ -5,6 +5,15 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     -- Color theme(s)
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    -- use { "https://codeberg.org/oahlen/iceberg.nvim", as = "iceberg" }
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            require("rose-pine").setup()
+        end
+    })
     use { "catppuccin/nvim", as = "catppuccin" }
     --Treesitter
     use {
@@ -17,7 +26,7 @@ return require('packer').startup(function(use)
     -- telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     --LSP Stuff
@@ -26,21 +35,21 @@ return require('packer').startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            { 'williamboman/mason.nvim' }, -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'hrsh7th/cmp-buffer' }, -- Optional
+            { 'hrsh7th/cmp-path' }, -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
+            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
     use 'jose-elias-alvarez/null-ls.nvim'
@@ -50,9 +59,20 @@ return require('packer').startup(function(use)
         "folke/trouble.nvim",
         config = function()
             require("trouble").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
+                icons = false,
+                {
+                    fold_open = "v", -- icon used for open folds
+                    fold_closed = ">", -- icon used for closed folds
+                    indent_lines = false, -- add an indent guide below the fold icons
+                    signs = {
+                        -- icons / text used for a diagnostic
+                        error = "error",
+                        warning = "warn",
+                        hint = "hint",
+                        information = "info"
+                    },
+                    use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
+                }
             }
         end
     }
@@ -66,6 +86,5 @@ return require('packer').startup(function(use)
     -- Undotree
     use("mbbill/undotree")
     -- Fun stuff
-    use ('ThePrimeagen/vim-be-good')
+    use('ThePrimeagen/vim-be-good')
 end)
-
